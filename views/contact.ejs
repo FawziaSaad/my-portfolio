@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+<h1>Contact</h1>
+
+<div class="contact-info">
+  <h2>Contact Information</h2>
+  <p>Email: fawziaanime@gmail.com</p>
+  <p>Phone: 437-259-8866</p>
+</div>
+
+<div class="contact-form">
+  <h2>Send a Message</h2>
+  <form action="/" method="POST">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required>
+
+    <label for="contactNumber">Contact Number:</label>
+    <input type="text" id="contactNumber" name="contactNumber" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Send</button>
+    <button type="reset">Reset</button>
+  </form>
+</div>
