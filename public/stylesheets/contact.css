@@ -1,0 +1,68 @@
+/* 
+    Filename: project.css
+    Name: Fawzia Saad
+    StudentID: 301296233
+    Date: Monday, May 22, 2023
+*/
+
+.contact-info {
+    margin-bottom: 20px;
+ }
+  
+.contact-info h2 {
+    margin-top: 0;
+}
+  
+.contact-form {
+    max-width: 500px;
+}
+  
+.contact-form h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+  
+.contact-form form {
+    display: grid;
+    gap: 10px;
+}
+  
+.contact-form label {
+    font-weight: bold;
+}
+  
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  
+.contact-form .button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+  
+.contact-form button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+.contact-form button:hover {
+    background-color: #45a049;
+}
+  
+.contact-form button[type="reset"] {
+    background-color: #f44336;
+}
+  
+.contact-form button[type="reset"]:hover {
+    background-color: #d32f2f;
+}
+  

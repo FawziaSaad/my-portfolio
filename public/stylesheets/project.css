@@ -1,0 +1,30 @@
+/* 
+    Filename: project.css
+    Name: Fawzia Saad
+    StudentID: 301296233
+    Date: Monday, May 22, 2023
+*/
+ 
+.project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+  
+.project-image {
+    width: 150px; 
+    height: auto; 
+    margin-right: 20px; 
+    border-radius: 5px; /*Add rounded corners to the images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1); /* Shadow effect */
+}
+  
+.project h2 {
+    margin-bottom: 10px;
+}
+  
+.project p {
+    margin-bottom: 0;
+    margin-right: 20px;
+    margin-left: 20px;
+}

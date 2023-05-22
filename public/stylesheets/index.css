@@ -1,0 +1,38 @@
+/* 
+    Filename: project.css
+    Name: Fawzia Saad
+    StudentID: 301296233
+    Date: Monday, May 22, 2023
+*/
+
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-top: 50px;
+    letter-spacing: 2px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #345678;
+    color: #fff;
+    padding: 3px 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #123456;
+}

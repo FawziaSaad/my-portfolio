@@ -1,8 +1,92 @@
+/* 
+    Filename: project.css
+    Name: Fawzia Saad
+    StudentID: 301296233
+    Date: Monday, May 22, 2023
+*/
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #333;
 }
 
 a {
   color: #00B7FF;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.profile-image {
+  width: 150px; /* Adjust the width as needed */
+  height: auto; /* Preserve aspect ratio */
+  margin-right: 20px; /* Add spacing between the image and text */
+}
+
+/* Reset default styles for better consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Center the content vertically */
+html, body {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Style the header */
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #888;
+}
+
+/* Style the main content section */
+main {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* Style the footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+footer p {
+  margin-bottom: 10px;
 }
