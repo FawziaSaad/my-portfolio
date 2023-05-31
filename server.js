@@ -1,10 +1,4 @@
 #!/usr/bin/env node
-/* 
-    Filename: server.js
-    Name: Fawzia Saad
-    StudentID: 301296233
-    Date: Monday, May 22, 2023
-*/
 /**
  * Module dependencies.
  */

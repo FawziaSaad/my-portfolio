@@ -12,9 +12,6 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
-// Define the port on which the server will run
-let port = 3000; 
-
 // Import route handlers for different routes
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
@@ -58,11 +55,6 @@ app.use(function(err, req, res, next) {
   // Render the error page
   res.status(err.status || 500);
   res.render('error');
-});
-
-// Start the server
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
 });
 
 // Export the app module
