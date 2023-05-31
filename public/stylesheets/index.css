@@ -1,10 +1,11 @@
 /* 
-    Filename: project.css
+    Filename: index.css
     Name: Fawzia Saad
     StudentID: 301296233
     Date: Monday, May 22, 2023
 */
 
+/* Styling for the Home page */
 body {
     background-color: #f7f7f7;
     font-family: Arial, sans-serif;
@@ -23,10 +24,11 @@ p {
     margin-bottom: 20px;
 }
 
+/* Learn more button */
 .btn {
     display: inline-block;
-    background-color: #345678;
-    color: #fff;
+    background-color: #8ecae6;
+    color: white;
     padding: 3px 5px;
     border-radius: 5px;
     text-decoration: none;
@@ -34,5 +36,5 @@ p {
 }
 
 .btn:hover {
-    background-color: #123456;
+    background-color: rgb(173, 225, 173);
 }

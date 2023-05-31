@@ -1,31 +1,61 @@
+<!-- Projects Page -->
+
 <%- include('partials/header') %>
-<link rel='stylesheet' href='/stylesheets/style.css'/>
-<link rel='stylesheet' href='/stylesheets/project.css'/>
 
-<br>
-<h1>Projects</h1>
-<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %></title>
 
-<div class="project">
-  <img src="/images/passgen.png" alt="Project 1" class="project-image">
-  <div class="service-content">
-    <h2>Password Generator</h2>
-    <p>I worked as a developer to create a custom tkinter password generator made from scratch using Python. </p>
-  </div>
-</div>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/Content/app.css">
+    <link rel='stylesheet' href='/stylesheets/project.css'/>
+    
+</head>
+<body>
+    <h1><%= title %></h1>
+    <br>
 
-<div class="project">
-  <img src="/images/birdsmasher.jpeg" alt="Project 2" class="project-image">
-  <div class="service-content">
-    <h2>Bird Smasher Game</h2>
-    <p>Developed an interactive bird smasher game using HTML5 Canvas.</p>
-  </div>
-</div>
+    <div class="project">
+        <a href="https://github.com/FawziaSaad/password_generator.git">
+            <img src="/Assets/images/passgen.png" alt="Project 1" class="project-image">
+        </a>
+        <div class="service-content">
+            <a href="https://github.com/FawziaSaad/password_generator.git">
+            <h2>Password Generator</h2>
+            </a>
+            <p>Developed a GUI password generator using custom tkinter and Python.</p>
+        </div>
+    </div>
 
-<div class="project">
-  <img src="/images/table.jpeg" alt="Project 3" class="project-image">
-  <div class="service-content">
-    <h2>Multiplication Table Generator</h2>
-    <p>Developed an interactive multiplication table game using JavaScript.</p>
-  </div>
-</div>
+    <div class="project">
+        <a href="https://github.com/FawziaSaad/Bird-Smasher.git">
+            <img src="/Assets/images/birdsmasher.jpeg" alt="Project 2" class="project-image">
+        </a>
+        <div class="service-content">
+            <a href="https://github.com/FawziaSaad/Bird-Smasher.git">
+            <h2>Angry Bird Smasher</h2>
+            </a>
+            <p>Developed an interactive angry bird smasher game using HTML5 Canvas.</p>
+        </div>
+    </div>
+
+    <div class="project">
+        <a href="https://github.com/FawziaSaad/multiplication-table.git">
+            <img src="/Assets/images/table.jpeg" alt="Project 3" class="project-image">
+        </a>
+        <div class="service-content">
+            <a href="https://github.com/FawziaSaad/multiplication-table.git">
+            <h2>Multiplication Table Generator</h2>
+            </a>
+            <p>Developed an interactive multiplication table generator using JavaScript.</p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<%- include('partials/footer') %> 

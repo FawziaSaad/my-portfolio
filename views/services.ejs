@@ -1,30 +1,49 @@
+<!-- Services Page -->
+
 <%- include('partials/header') %>
-<link rel='stylesheet' href='/stylesheets/style.css'/>
-<link rel='stylesheet' href='/stylesheets/service.css'/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+   
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/Content/app.css" />
+  <link rel='stylesheet' href='/stylesheets/service.css'/>
+  
+</head>
+<body>
+    <h1><%= title %></h1>
+    <br>
 
-<h1>Services</h1>
-<br>
+    <div class="service">
+        <img src="/Assets/images/genprog.jpeg" alt="Service 1" class="service-image">
+        <div class="service-content">
+            <h2>General Programming</h2>
+            <p>I offer general programming services to help you with your software development needs.</p>
+        </div>
+    </div>
 
-<div class="service">
-  <img src="/images/genprog.jpeg" alt="Service 1" class="service-image">
-  <div class="service-content">
-  <h2>General Programming</h2>
-  <p>I offer general programming services to help you with your software development needs.</p>
-</div>
-</div>
+    <br>
+    <div class="service">
+        <img src="/Assets/images/webdev.jpeg" alt="Service 2" class="service-image">
+        <div class="service-content">
+            <h2>Web Development</h2>
+            <p>I specialize in creating responsive and user-friendly websites tailored to your requirements.</p>
+        </div>
+    </div>
 
-<div class="service">
-  <img src="/images/webdev.jpeg" alt="Service 2" class="service-image">
-  <div class="service-content">
-    <h2>Web Development</h2>
-    <p>I specialize in creating responsive and user-friendly websites tailored to your requirements.</p>
-  </div>
-</div>
+    <br>
+    <div class="service">
+        <img src="/Assets/images/mobileapp.jpeg" alt="Service 3" class="service-image">
+        <div class="service-content">
+            <h2>Mobile Apps</h2>
+            <p>I can develop mobile applications for various platforms, including iOS and Android.</p>
+        </div>
+    </div>
+</body>
+</html>
 
-<div class="service">
-  <img src="/images/mobileapp.jpeg" alt="Service 3" class="service-image">
-  <div class="service-content">
-    <h2>Mobile Apps</h2>
-    <p>I can develop mobile applications for various platforms, including iOS and Android.</p>
-  </div>
-</div>
+<%- include('partials/footer') %> 

@@ -4,11 +4,12 @@
     StudentID: 301296233
     Date: Monday, May 22, 2023
 */
- 
+
+/* Styling for the Projects page */
 .project {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
   
 .project-image {
@@ -25,6 +26,4 @@
   
 .project p {
     margin-bottom: 0;
-    margin-right: 20px;
-    margin-left: 20px;
 }

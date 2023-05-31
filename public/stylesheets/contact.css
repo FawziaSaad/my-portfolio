@@ -1,10 +1,13 @@
 /* 
-    Filename: project.css
+    Filename: contact.css
     Name: Fawzia Saad
     StudentID: 301296233
     Date: Monday, May 22, 2023
 */
 
+/* Styling for the Contact page */
+
+/* Styling for contact information section */
 .contact-info {
     margin-bottom: 20px;
  }
@@ -13,6 +16,7 @@
     margin-top: 0;
 }
   
+/* Styling for contact form section */
 .contact-form {
     max-width: 500px;
 }

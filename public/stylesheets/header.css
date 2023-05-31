@@ -1,5 +1,5 @@
 /* 
-    Filename: project.css
+    Filename: header.css
     Name: Fawzia Saad
     StudentID: 301296233
     Date: Monday, May 22, 2023
@@ -7,15 +7,23 @@
 
 /* Style the navigation menu */
 nav {
-    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: #1C201F;
     padding: 20px;
+    color: #fff;
+    height: 90px; /* Set the height of the navigation bar */
 }
   
 nav ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
   
 nav ul li {
@@ -25,12 +33,15 @@ nav ul li {
   
 nav ul li a {
     text-decoration: none;
-    color: #333;
-    padding: 5px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
   
 nav ul li a:hover {
-    color: #666;
+    background-color: #666;
+
 }
 
 .logo img {
@@ -57,3 +68,8 @@ a {
     color: #333;
 }
 
+body {
+    margin-top: 80px; /* Create enough space for the navigation */
+    padding-bottom: 80px; /* Create enough space for the footer */
+}
+  

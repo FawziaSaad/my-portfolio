@@ -1,30 +1,42 @@
+/* 
+    Filename: index.js
+    Name: Fawzia Saad
+    StudentID: 301296233
+    Date: Monday, May 22, 2023
+*/
+
 // Import the necessary modules and create a new router
 const express = require('express');
 const router = express.Router();
 
-// Define the route for the Home page
+// GET Home page
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home' });
 });
 
-// Define the route for the Contact page
-router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact' });
+// GET Home page
+router.get('/home', function(req, res, next) {
+  res.render('index', { title: 'Home' });
 });
 
-// Define the route for the About page
+// GET About page
 router.get('/about', function(req, res, next) {
   res.render('about', { title: 'About' });
 });
 
-// Define the route for the Contact page
+// GET Projects page
 router.get('/projects', function(req, res, next) {
   res.render('projects', { title: 'Projects' });
 });
 
-// Define the route for the Contact page
+// GET Services page
 router.get('/services', function(req, res, next) {
   res.render('services', { title: 'Services' });
+});
+
+// GET Contact page
+router.get('/contact', function(req, res, next) {
+  res.render('contact', { title: 'Contact' });
 });
 
 // Export the router

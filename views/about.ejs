@@ -1,17 +1,35 @@
+<!-- About Me Page -->
 <%- include('partials/header') %> 
-<link rel='stylesheet' href='/stylesheets/style.css'/>
-<h1>About Me</h1>
-<h2><strong>Fawzia Saad</strong></h2>
-<br>
-<div class="content-wrapper">
-    <img src="/images/headshot.jpeg" alt="Headshot" class="profile-image">
-    <p>
-        I am a passionate web developer with expertise in HTML, CSS, JavaScript, C#, Java, and SQL. 
-        I have a few years of experience working on various web projects and love creating visually appealing and user-friendly websites. 
-        My goal is to continuously learn and grow in the field of web development while delivering high-quality solutions to clients.
-        You can view my resume here: <a href="/Resume.pdf" target="_blank">Resume (PDF)</a>
-    </p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+
+    <!-- Stylesheets -->
+    <link rel='stylesheet' href='/stylesheets/about.css'/>
+    <link rel="stylesheet" href="/Content/app.css" />
+    
+</head>
+<body>
+    <h1><%= title %> Me</h1>
+    <h2><strong>Fawzia Saad</strong></h2>
+    <br>
+    <div class="content-wrapper">
+        <img src="/Assets/images/headshot.jpeg" alt="Headshot" class="profile-image">
+        <p>
+            I am a passionate web developer with expertise in HTML, CSS, JavaScript, C#, Java, and SQL. 
+            I have a few years of experience working on various web projects and love creating visually appealing and user-friendly websites. 
+            My goal is to continuously learn and grow in the field of web development while delivering high-quality solutions to clients.
+            You can view my resume here: <a href="/Assets/Resume.pdf" target="_blank">Resume (PDF)</a>
+        </p>
+    </div>
+</body>
+</html>
+
+<%- include('partials/footer') %> 
 
 
 

@@ -1,9 +1,10 @@
 /* 
-    Filename: project.css
+    Filename: service.css
     Name: Fawzia Saad
     StudentID: 301296233
     Date: Monday, May 22, 2023
 */
+/*  Styling for the Service page  */
 .service {
     display: flex;
     align-items: center;
@@ -11,8 +12,11 @@
 }
   
 .service-image {
-    width: 100px; /* Adjust the width as needed */
-    margin-right: 20px;
+    width: 150px; 
+    height: auto; 
+    margin-right: 20px; 
+    border-radius: 5px; /*Add rounded corners to the images */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 1); /* Shadow effect */
 }
   
 .service-content {
