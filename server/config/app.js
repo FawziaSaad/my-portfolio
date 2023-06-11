@@ -12,15 +12,29 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
+// database setup
+let mongoose = require('mongoose');
+let DB = require('./db');
+
 // Import route handlers for different routes
-let indexRouter = require('./routes/index');
-let usersRouter = require('./routes/users');
+let indexRouter = require('../routes/index');
+let usersRouter = require('../routes/users');
+let contactRouter = require('../routes/contact');
+
+// point mongoose to the DB URI
+mongoose.connect(DB.URI);
+
+let mongoDB = mongoose.connection;
+mongoDB.on('error', console.error.bind(console, 'Connection Error:'));
+mongoDB.once('open', ()=>{
+  console.log('Connected to MongoDB...');
+})
 
 // Create an instance of the Express application
 let app = express();
 
 // Configure the view engine and views folder
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, '../views'));
 app.set('view engine', 'ejs');
 
 // Set up middleware
@@ -28,11 +42,13 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'node_modules')));
+app.use(express.static(path.join(__dirname, '../../public')));
+app.use(express.static(path.join(__dirname, '../../node_modules')));
 
 // Define routes
 app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/contacts-list', contactRouter);
 
 //Route handler for handling form submission on the root path
 app.post('/', (req, res) => {
