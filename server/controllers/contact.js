@@ -2,7 +2,7 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 
-// connect to our Game Model
+// connect to our Contact Model
 let Contact = require('../models/contact');
 
 module.exports.displayContactList = async (req, res, next)=>{
@@ -41,7 +41,6 @@ module.exports.processAddPage = async (req, res, next) => {
 
 module.exports.displayEditPage = async (req, res, next) => {
     let id = req.params.id;
-    console.log("Hello World!");
     try {
         let contactToEdit = await Contact.findById(id);
         res.render('contact/edit', {title: 'Edit Contact', contact: contactToEdit});

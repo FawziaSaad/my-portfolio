@@ -17,7 +17,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="developerTextField">Contact Number</label>
+                    <label for="numberTextField">Contact Number</label>
                     <input type="tel" class="form-control"
                     id="numberTextField"
                     placeholder="Enter the contact's number"
@@ -36,13 +36,15 @@
                     required>
                 </div>
 
-
                 <br>
                 <button class="btn btn-primary" type="submit">
                     <i class="fas fa-edit"></i> Submit</button>
 
                 <a href="/contacts-list" class="btn btn-warning">
                     <i class="fas fa-undo"></i> Cancel</a>
+                
+                <a href="/contacts-list/delete/<%= contact._id %>" class="btn btn-danger">
+                    <i class="fas fa-trash-alt"></i> Delete</a>
             </form>
         </div>
     </div>
