@@ -1,3 +1,10 @@
+/* 
+    Filename: user.js
+    Name: Fawzia Saad
+    StudentID: 301296233
+    Date: Wednesday, June 14, 2023
+*/
+
 let mongoose = require('mongoose');
 let passportLocalMongoose = require('passport-local-mongoose');
 

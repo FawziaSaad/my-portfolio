@@ -1,3 +1,10 @@
+/* 
+    Filename: contact.js
+    Name: Fawzia Saad
+    StudentID: 301296233
+    Date: Wednesday, June 14, 2023
+*/
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
@@ -18,7 +25,7 @@ function requireAuth(req, res, next)
 }
 
 // Get Route for the Contact List page - READ Operation
-router.get('/', contactController.displayContactList);
+router.get('/', requireAuth, contactController.displayContactList);
 
 // Get Route for the Add page - CREATE Operation
 router.get('/add', requireAuth, contactController.displayAddPage);

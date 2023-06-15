@@ -1,3 +1,10 @@
+/* 
+    Filename: contact.js
+    Name: Fawzia Saad
+    StudentID: 301296233
+    Date: Wednesday, June 14, 2023
+*/
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
@@ -9,7 +16,7 @@ module.exports.displayContactList = async (req, res, next)=>{
     try {
         let contactList = await Contact.find();
         let sortedList = contactList.sort((a, b) => a.name > b.name ? 1 : -1);
-        res.render('contact/list', {title: 'Contacts', ContactList: sortedList})
+        res.render('contact/list', {title: 'Contacts', ContactList: sortedList, displayName: req.user ? req.user.displayName : ''})
     } catch (err){
         console.log(err);
     }
@@ -17,7 +24,7 @@ module.exports.displayContactList = async (req, res, next)=>{
 
 module.exports.displayAddPage = async (req, res, next)=>{
     try {
-        res.render('contact/add', {title: 'Contacts'})
+        res.render('contact/add', {title: 'Contacts', displayName: req.user ? req.user.displayName : ''})
     } catch (err){
         console.log(err);
     }
@@ -43,7 +50,7 @@ module.exports.displayEditPage = async (req, res, next) => {
     let id = req.params.id;
     try {
         let contactToEdit = await Contact.findById(id);
-        res.render('contact/edit', {title: 'Edit Contact', contact: contactToEdit});
+        res.render('contact/edit', {title: 'Edit Contact', contact: contactToEdit, displayName: req.user ? req.user.displayName : ''});
     } catch (err){
         console.log(err);
         res.status(500).send(err);

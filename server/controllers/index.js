@@ -1,3 +1,10 @@
+/* 
+    Filename: index.js
+    Name: Fawzia Saad
+    StudentID: 301296233
+    Date: Wednesday, June 14, 2023
+*/
+
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
@@ -63,7 +70,7 @@ module.exports.processLoginPage = (req, res, next) => {
             {
                 return next(err);
             }
-            return res.redirect('/contacts-list');
+            return res.redirect('/contacts-list?displayName=' +  user.displayName);
         });
     })(req, res, next);
 }
