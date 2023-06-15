@@ -10,9 +10,9 @@ let router = express.Router();
 let mongoose = require('mongoose');
 let passport = require('passport');
 
-// create the User Model instance
+//Create the User Model instance
 let userModel = require('../models/user');
-let User = userModel.User; //alias
+let User = userModel.User; //Alias
 
 module.exports.displayHomePage = (req, res, next) => {
     res.render('index', { title: 'Home', displayName: req.user ? req.user.displayName : '' });
@@ -35,7 +35,7 @@ module.exports.displayContactPage = (req, res, next) => {
 }
 
 module.exports.displayLoginPage = (req, res, next) => {
-    // check if the user is already logged in
+    //Check if the user is already logged in
     if(!req.user)
     {
         res.render('auth/login',
@@ -54,12 +54,12 @@ module.exports.displayLoginPage = (req, res, next) => {
 module.exports.processLoginPage = (req, res, next) => {
     passport.authenticate('local',
     (err, user, info) => {
-        //server err?
+        //Server err?
         if(err)
         {
             return next(err);
         }
-        // is there a user login err?
+        //Is there a user login err?
         if(!user){
             req.flash('loginMessage', 'Authentication Error');
             return res.redirect('/login');
@@ -76,7 +76,7 @@ module.exports.processLoginPage = (req, res, next) => {
 }
 
 module.exports.displayRegisterPage = (req, res, next) => {
-    // check if the user is not already logged in
+    //Check if the user is not already logged in
     if(!req.user)
     {
         res.render('auth/register',
@@ -93,7 +93,7 @@ module.exports.displayRegisterPage = (req, res, next) => {
 }
 
 module.exports.processRegisterPage = (req, res, next) => {
-    //initialize an user object
+    //Initialize an user object
     let newUser = new User({
         username: req.body.username,
         email: req.body.email,
@@ -122,7 +122,7 @@ module.exports.processRegisterPage = (req, res, next) => {
         }
         else
         {
-            //if registration is success
+            //If registration is success
             return passport.authenticate('local')(req, res, () => {
                 res.redirect('/contacts-list')
             });
@@ -134,7 +134,7 @@ module.exports.performLogout = (req, res, next) => {
     req.logout((err) => {
         if (err)
         {
-            //handle error here
+            //Handle error here
             console.log(err);
             return next(err);
         }

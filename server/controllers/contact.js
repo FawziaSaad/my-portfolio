@@ -46,18 +46,18 @@ module.exports.processAddPage = async (req, res, next) => {
     }
 };
 
-module.exports.displayEditPage = async (req, res, next) => {
+module.exports.displayUpdatePage = async (req, res, next) => {
     let id = req.params.id;
     try {
-        let contactToEdit = await Contact.findById(id);
-        res.render('contact/edit', {title: 'Edit Contact', contact: contactToEdit, displayName: req.user ? req.user.displayName : ''});
+        let contactToUpdate = await Contact.findById(id);
+        res.render('contact/update', {title: 'Update Contact', contact: contactToUpdate, displayName: req.user ? req.user.displayName : ''});
     } catch (err){
         console.log(err);
         res.status(500).send(err);
     }
 };
 
-module.exports.processEditPage = async (req, res, next) => {
+module.exports.processUpdatePage = async (req, res, next) => {
     let id = req.params.id;
 
     let updatedContact = {
