@@ -12,14 +12,14 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
-// modules for authentication
+// Modules for authentication
 let session = require('express-session');
 let passport = require('passport');
 let passportLocal = require('passport-local');
 let localStrategy = passportLocal.Strategy;
 let flash = require('connect-flash');
 
-// database setup
+// Database setup
 let mongoose = require('mongoose');
 let DB = require('./db');
 
@@ -28,7 +28,7 @@ let indexRouter = require('../routes/index');
 let usersRouter = require('../routes/users');
 let contactRouter = require('../routes/contact');
 
-// point mongoose to the DB URI
+// Point mongoose to the DB URI
 mongoose.connect(DB.URI);
 
 let mongoDB = mongoose.connection;
@@ -52,41 +52,39 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../../public')));
 app.use(express.static(path.join(__dirname, '../../node_modules')));
 
-// setup express session
+// Setup express session
 app.use(session({
   secret: "SomeSecret",
   saveUninitialized: false,
   resave: false
 }));
 
-// initialize flash
+// Initialize flash
 app.use(flash());
 
 // initialize passport
 app.use(passport.initialize());
 app.use(passport.session());
 
-// passport user configuration
-
-// create a User Model Instance
+//Create a User Model Instance
 let userModel = require('../models/user');
 let User = userModel.User;
 
-// implement User Authentication Strategy
+//Implement User Authentication Strategy
 passport.use(User.createStrategy());
 
-// serialize and deserialize the User Info
+//Serialize and deserialize the User Info
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// Define routes
+//Define routes
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/contacts-list', contactRouter);
 
 //Route handler for handling form submission on the root path
 app.post('/', (req, res) => {
-  // Redirect the user to the home page
+  //Redirect the user to the home page
   res.redirect('/');
 });
 

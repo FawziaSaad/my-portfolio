@@ -9,14 +9,17 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 
-// connect to our Contact Model
+//Connect to Contact Model
 let Contact = require('../models/contact');
 
 module.exports.displayContactList = async (req, res, next)=>{
     try {
         let contactList = await Contact.find();
         let sortedList = contactList.sort((a, b) => a.name > b.name ? 1 : -1);
-        res.render('contact/list', {title: 'Contacts', ContactList: sortedList, displayName: req.user ? req.user.displayName : ''})
+        res.render('contact/list', 
+            {title: 'Contacts', 
+            ContactList: sortedList, 
+            displayName: req.user ? req.user.displayName : ''})
     } catch (err){
         console.log(err);
     }
@@ -24,7 +27,9 @@ module.exports.displayContactList = async (req, res, next)=>{
 
 module.exports.displayAddPage = async (req, res, next)=>{
     try {
-        res.render('contact/add', {title: 'Contacts', displayName: req.user ? req.user.displayName : ''})
+        res.render('contact/add', 
+        {title: 'Add Contact', 
+        displayName: req.user ? req.user.displayName : ''})
     } catch (err){
         console.log(err);
     }
@@ -50,7 +55,10 @@ module.exports.displayUpdatePage = async (req, res, next) => {
     let id = req.params.id;
     try {
         let contactToUpdate = await Contact.findById(id);
-        res.render('contact/update', {title: 'Update Contact', contact: contactToUpdate, displayName: req.user ? req.user.displayName : ''});
+        res.render('contact/update', 
+        {title: 'Update Contact', 
+        contact: contactToUpdate, 
+        displayName: req.user ? req.user.displayName : ''});
     } catch (err){
         console.log(err);
         res.status(500).send(err);

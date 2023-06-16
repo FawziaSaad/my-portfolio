@@ -70,7 +70,7 @@ module.exports.processLoginPage = (req, res, next) => {
             {
                 return next(err);
             }
-            return res.redirect('/contacts-list?displayName=' +  user.displayName);
+            return res.redirect('/contacts-list');
         });
     })(req, res, next);
 }
